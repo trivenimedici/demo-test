@@ -1,0 +1,103 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validation of Live Casino game features",
+    "line": 2,
+    "id": "validation-of-live-casino-game-features",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "LiveCasino.feature",
+    "elements": [
+      {
+        "id": "validation-of-live-casino-game-features;verify-if-the-user-is-able-to-place-bets-when-there-are-enough-credits-in-the-account",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Verify if the user is able to place bets when there are enough credits in the account",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User login to the application",
+            "result": {
+              "status": "passed",
+              "duration": 23971000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "User Initial Balance credits are stored",
+            "result": {
+              "status": "passed",
+              "duration": 165000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User clicks on \"Live Casino\"",
+            "result": {
+              "status": "passed",
+              "duration": 1087000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User choose the casino game selection as \"Royal Gaming\"",
+            "result": {
+              "status": "passed",
+              "duration": 16035000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "User clicks on \"7 Up Down\"",
+            "result": {
+              "status": "passed",
+              "duration": 3525000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "User clicks on \"Continue\"",
+            "result": {
+              "status": "passed",
+              "duration": 1400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "User places bet for \"7Up\" with Stake of \"100\"",
+            "result": {
+              "status": "failed",
+              "duration": 70947000000,
+              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.back`, but never found it.\n    at eval (https://demo.hypexone.com/__cypress/tests?p=cypress\\integration\\features\\ui\\LiveCasino.feature:366:14)\n    at resolveValue (https://demo.hypexone.com/__cypress/tests?p=cypress\\support\\index.js:9928:20)\n    at Context.waitUntil (https://demo.hypexone.com/__cypress/tests?p=cypress\\support\\index.js:9938:10)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

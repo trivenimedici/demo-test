@@ -1,0 +1,29 @@
+{
+  "disableStorageReset": false,
+  "defaultCommandTimeout": 30000,
+  "responseTimeout": 3000,
+  "pageLoadTimeout": 30000,
+  "requestTimeout": 3000,
+  "ignoreTestFiles": [
+    "**/step_definitions/ui/*.js",
+    "**/step_definitions/api/*.js",
+    "**/step_definitions/db/*.js",
+    "**/resources/*.module.js"
+  ],
+  "testFiles": "**/*.feature",
+  "screenshotsFolder": "../results/cypress/screenshots",
+  "screenshotOnRunFailure": true,
+  "videosFolder": "../results/cypress/videos",
+  "video": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
+  "trashAssetsBeforeRuns": true,
+  "runtime_env": "prod",
+  "app_prod_url": "https://demo.hypexone.com/",
+  "app_prod_username": "aitest1",
+  "app_prod_password": "Abcd12345"
+}

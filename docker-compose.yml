@@ -1,0 +1,12 @@
+version: '3'
+services:
+  reg-suit1:
+    image: docker-base-imagename
+    command: test_reg1
+    volumes:
+      - ./cypress/reports/cucumber-report:/cypress-docker/cypress/reports
+  reg-suit2:
+    image: docker-base-imagename
+    command: test_reg2
+    volumes:
+      - ./cypress/reports/cucumber-report:/cypress-docker/cypress/reports

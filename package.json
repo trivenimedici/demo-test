@@ -1,0 +1,49 @@
+{
+  "name": "cypress-cucumber-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-tags": "^0.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@cypress/webpack-preprocessor": "^5.9.1",
+    "@testing-library/cypress": "^8.0.3",
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "@types/node": "^16.11.6",
+    "babel-loader": "^8.2.3",
+    "cypress-wait-until": "^1.7.2",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "webpack": "^5.61.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "test": "npx cypress-tags run -e 'TAGS=not @Skip '",
+    "smokeTest:sit": "npx cypress-tags run -e TAGS='@SmokeTest'",
+    "runHeadless": "./node_modules/.bin/cypress run --headless",
+    "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome ",
+    "cypress: open": "cypress open",
+    "cypress: run": "cypress run",
+    "cypress: run:chrome": "cypress run --browser chrome",
+    "cypress: run:firefox": "cypress run --browser firefox",
+    "test_reg1": "npx cypress run --env TAGS=\"@Regression1 and not (@skip or @UnderFix)\"",
+    "test_reg2": "npx cypress run --env TAGS=\"@Regression2 and not (@skip or @UnderFix)\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
